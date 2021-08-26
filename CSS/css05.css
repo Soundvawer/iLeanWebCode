@@ -1,0 +1,26 @@
+*{
+    border : 2px solid;
+}
+h1{
+    border:unset;
+    text-align: center;
+    margin-bottom: 3px;
+}
+th{
+    border: unset; 
+}
+tr:first-child()
+{
+    background-color: rgb(235, 187, 187);
+}
+tr:nth-child(3), :nth-child(5)
+{
+    background-color: rgb(168, 154, 154) ;
+}
+tr:nth-child(2), :nth-child(4)
+{
+    background-color: rgb(218, 209, 209);
+}
+th:last-child{
+    padding: 0 0;
+}

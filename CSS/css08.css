@@ -1,0 +1,71 @@
+h1{
+    color: rgb(168, 231, 20);
+    font-size: 80px;
+}
+div.menu{
+   background-color: rgb(35, 117, 184); 
+   height: 70px;
+   width: 100%;
+}
+ul.each{
+    font-weight: bold;
+    padding-left: 5px;
+}
+li:first-child > a{
+    color: rgb(247, 244, 65);
+    text-shadow: 6px 5px  #000 ;
+    font-weight: bold;
+    font-size: 35px;
+}
+a{
+    color: rgb(249, 249, 252);
+    line-height: 70px;
+    margin-left: 10px;
+    font-size: 32px;
+    text-decoration-line: none;
+    font-weight: bold;
+}
+li:last-child{
+    float: right;
+}
+li>a{
+    padding: 0 15px;
+}
+li{
+    display: inline-block;
+
+}
+li:hover:not(li:first-child)
+{
+    background-color: cadetblue;
+}
+div.Register{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 40px 10px;
+}
+span{
+    font-size:35px;
+    color: darkgreen;
+}
+span:hover{
+    color: palevioletred;
+    cursor: pointer;
+
+}
+button{
+    width: 160px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(22, 143, 190);
+    color: cornsilk;
+    padding: 10px 10px;
+    font-size: 25px;
+
+}
+button:hover{
+    background-color: mediumaquamarine;
+    color: blueviolet;
+
+}
+

@@ -1,0 +1,27 @@
+@charset "utf-8";
+*{
+    border : 3px solid;
+    font-size: 20px;
+    padding: 10px;
+}
+h1{
+    font-weight: bold;
+    background-color: rgb(109, 106, 106);
+}
+span{
+    background-color: grey;
+    font-weight: 500;
+    padding: 0px 2px 2px 2px ;
+    font-weight: bold;
+
+}
+.span-solid{
+    border: 5px solid rgb(29, 29, 83) ;
+}
+.span-dotted{
+    border : 5px dotted rgb(168, 17, 17);
+}
+img{
+    border: 2px solid darkblue;
+    height: 200px;
+}

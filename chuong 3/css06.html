@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS 06</title>
+        <script>
+            function Sum() {
+                var a = document.getElementById("txtNumber").value
+                var arr = a.split(",")
+                var sum = 0
+                for(var i=0; i<arr.length;i++)
+                {
+                    sum += Number(arr[i])
+                }
+                document.getElementById("kq").innerHTML = "Tổng các số là " + sum
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Tính tổng dãy số</h3>
+        <label for="txtNumber">Nhập dãy số, mỗi số cách nhau dấu phẩy</label>
+        <input type="text" id="txtNumber">
+        <button onClick="Sum()">Tính tổng</button>
+        <p id="kq"></p>
+        
+    </body>
+    </html>

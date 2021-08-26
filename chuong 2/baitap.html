@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	   <style>
+       body>div{
+				margin: 0px auto;
+				width: 50%;
+			   height: 200px;
+				border: 5px dashed blue;
+            }
+        div h1{
+            margin-left:160px ;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        div > div{
+            height: 50px;
+            width: 100px;
+            border: 1px solid red;
+            float: left;
+			line-height: 50px;
+        
+     margin-bottom: 5px;        
+		   }
+		   div>div:nth-last-of-type(even){
+			  text-align: right;
+			  background-color: rgb(87, 87, 48);
+		   }
+           
+       div>div:nth-last-of-type(3){
+           clear: left;
+       }
+        
+	</style>
+</head>
+<body>
+	<div>
+        <h1>Ung dung web</h1>
+        <div> HTML </div>
+        <div>CSS</div>
+        <div>JAVASCIPT</div>
+        <div>JQUERY</div>
+        <div>bootstrap</div>
+    </div>
+</body>
+</html>
