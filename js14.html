@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT 14</title>
+    </head>
+    <body>
+        <h2>Lần lượt di chuyển con trỏ chuột lên hình và ra khỏi hình để xem hiệu ứng đổi hình</h2>
+       <img src="../Images/mouse.jpg" id="photo" width="280" height="280" cursor ="pointer" >
+       <script>
+           var hinh = document.getElementById("photo")
+           hinh.addEventListener('mouseover', function()
+           {hinh.src="../Images/mouse.jpg"})
+           hinh.addEventListener('mouseout', function()
+           {hinh.src="../Images/mousee.jpg"})
+       </script>
+    </body>
+</html>

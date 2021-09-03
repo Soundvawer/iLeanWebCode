@@ -1,0 +1,102 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT 03</title>
+        <style>
+        h2{ 
+            text-align: center; 
+            }
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            background-color: lightyellow;
+            width: 50%;
+            }
+        td {
+            border: 1px solid gray;
+            padding: 5px;
+            font-weight: bold;
+            width: 30%;
+        }   
+        </style>
+    
+    </head>
+    <body oncontextmenu="return false;">
+        <table>
+        <form >
+            <h2>CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH BẬC 2</h2>
+        <tr>
+            <td>a=</td>
+            <td><input type="number" id="first" name="txtFirst"></td>
+        </tr>
+        <tr>
+            <td>b=</td>
+            <td><input type="number" id="second" name="txtSecond"></td>
+        </tr>
+        <tr>
+            <td>b=</td>
+            <td><input type="number" id="third" name="txtThird"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" onclick="tinh(this.form)">Giải</button><button type="reset" value="Reset">Xóa</button></td>
+        </tr>
+        </form>
+        </table>
+        <p id="kq"><b></b></p>
+        <script>
+            function solve(form)
+            {
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = document.getElementById("c").value;
+                if(a == 0)
+                {
+                    if (b == 0)
+                    {
+                        if (c == 0)
+                        {
+                        document.getElementById("kq").innerHTML = "phương trình vô số nghiệm";
+                        }   
+                        else 
+                        {
+                        document.getElementById("kq").innerHTML = "phương trình vô nghiệm" ;
+                        }
+                    }
+                    else
+                    {
+                        document.getElementById("kq").innerHTML = "phương trình có nghiệm duy nhất: " + (-c/b)
+                    }
+                }
+                else
+                    {
+                        var delta = b*b -(4*a*c);
+                        var x1 = (-b + Math.sqrt(delta)) / (2*a);
+                        var x2 = (-b - Math.sqrt(delta)) / (2*a);
+                if (delta > 0)
+                    {
+                        document.getElementById("kq").innerHTML = "phương trình có 2 nghiệm x1 = " + x1
+                            + "; x2 = " + x2;
+                    }
+                else if (delta == 0)
+                    {
+                        document.getElementById("kq").innerHTML ="phương trình có nghiệm kép x1 = x2 = " + (-b/(2*a));
+                        
+                    }
+                else
+                    {
+                        document.getElementById("kq").innerHTML = "phương trình vô nghiệm!";
+                    }
+                }
+            }
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        </script>
+    </body>
+    </html>

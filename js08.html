@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 08</title>
+    </head>
+    <body>
+        <label>Nhập số phần tử :</label>
+        <input type="number" max = "50" id="dayso" name="sophantu" >
+        <br>
+        <button  onclick="taomang()"> TẠO MẢNG</button>
+        <button  onclick="mangtang()"> SẮP XẾP TĂNG </button>
+        <button  onclick="manggiam()"> SẮP XẾP GIẢM </button>
+        <br><br>
+        MẢNG BAN ĐẦU <p id="normal"></p><br>
+        MẢNG TĂNG DẦN <p id="up"></p><br>
+        MẢNG GIẢM DẦN <p id="down"></p><br>
+        <script>
+            function  taomang()
+            {
+                var mangbandau = document.getElementById("dayso").value;
+                var mangchuasapxep = "";;
+                mangmoi  = new Array(mangbandau)
+                for (var index = 0; index < mangbandau; index++) {
+                    mangmoi[index] = Math.floor(Math.random()*51);
+                    mangchuasapxep += mangmoi[index]+"\t"
+                }
+                document.getElementById("normal").innerHTML = mangchuasapxep
+            }
+            function mangtang()
+            {
+                document.getElementById("up").innerHTML=mangmoi.sort(function(a,b){return a - b})
+            }
+            function manggiam()
+            {
+                document.getElementById("down").innerHTML=mangmoi.sort(function(a,b){return b - a})
+            }
+            document.addEventListener('contextmenu',event.preventDefault())
+            </script>
+    </body>
+</html>

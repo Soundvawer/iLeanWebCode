@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT 13</title>
+    </head>
+    <body>
+        <h1 id="changing">Thay đổi style</h1>
+        <input type="radio" id="macdinh" checked onclick="location.reload()">Mặc định <br>
+        <input type="radio" id="applystyle" onclick="doiStyle()">Áp dụng style
+        <div id="demo" align ="center" >
+            <p class="general">click vào tùy chọn "Mặc định" chuyển về dạng mặc định</p>
+            <p class="general">lick vào tùy chọn "áp dụng style" để áp dụng style định dạng</p>
+
+        </div>
+       <script>
+           function doiStyle()
+           {
+               document.getElementById("changing").style.color = "red"
+               document.getElementById("demo").style.backgroundColor = "blue"
+
+               var mau = document.getElementById("demo")
+               mau.getElementsByClassName("general")[0].style.color="yellow"
+               mau.getElementsByClassName("general")[1].style.color="yellow"
+
+           }
+       </script>
+    </body>
+</html>

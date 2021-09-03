@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 05</title>
+    <body>
+        <table>
+            <tr>
+                <th colspan="2"><h1>ĐĂNG KÝ THÀNH VIÊN</h1></th>
+            </tr>  
+            <tr>
+                <td>Tên đăng nhập: </td>
+                <td><input  type="text" name ="name" id="textname" value=""></td>
+            </tr>
+<tr>
+<Td>Mật khẩu:</Td>
+<td><input type="password" id="pass"></td>
+</tr>
+<tr>
+    <td>Ngày sinh:</td>
+    <td><input type="text" id="birth"></td>
+</tr>
+<tr>
+    <td>Giới tính:</td>
+    <td>
+        <input type="radio" name="gioitinh" id="male" value="Nam">Nam
+        <input type="radio" name="gioitinh" id="female" value="Nu">Nữ
+    </td>
+</tr>
+<tr>
+    <td>Vấn đề bạn quan tâm:</td>
+    <td>
+        <select name="field" id="vande">
+            <option value="Kinh tế">Kinh tế</option>
+            <option value="Thể  thao">Thể thao</option>
+            <option value="Văn học nghệ thuật">Văn học nghệ thuật</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>
+        <input type="button" onclick="signin()" value="Đăng ký"> 
+    </td>
+    <td>
+        <input type="reset" value="Hủy">
+    </td>
+</tr>
+<tr>
+    <td colspan="2"><textarea name="" id="kq" cols="65" rows="10"></textarea></td>
+</tr>
+        </table>
+        <script>
+            function signin()
+            {
+                var hovaten =document.getElementById("textname").value
+                var matkhau =document.getElementById("pass").value
+                var dodai = matkhau.length
+                var gioiTINH
+                if (document.getElementById("male").checked)
+                {
+                    gioiTINH=document.getElementById("male").value
+                }
+                else if (document.getElementById("female").checked)
+                {
+                    gioiTINH=document.getElementById("female").value
+                }
+                var sinhnhat= document.getElementById("birth").value
+                var vandequantam = document.getElementById("vande").value;
+                document.getElementById("kq").innerHTML = "  Chào mừng " + hovaten +"\n  Bạn là  " + gioiTINH  + "\n  Mật khẩu của bạn có " + dodai + " ký tự " 
+                + "\n  Ban sinh ngày " + sinhnhat + "\n  Vấn đề bạn quan tâm là " + vandequantam;
+                document.addEventListener('contextmenu', event => event.preventDefault());
+            }
+        </script>
+    </body>
+</head>

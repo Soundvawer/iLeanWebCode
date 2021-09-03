@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 05</title>
+    </head>
+    <body>
+        <h1 id="a">HTML-JAVASCRIPT</h1>
+        <h1 id="q">HTML-JAVASCRIPT</h1>
+        <script>
+            setInterval(function()
+            {
+                var A=document.getElementById("a").innerHTML
+                var chuoiA=A.substr(1) + A.substr(0,1)
+                document.getElementById("a").innerHTML=chuoiA;
+
+                var Q=document.getElementById("q").innerHTML
+                var chuoiQ=Q.substr(Q.length-1) + Q.substr(0,Q.length-1)
+                document.getElementById("q").innerHTML=chuoiQ;           
+            }, 900)
+            document.addEventListener('contextmenu', event => event.preventDefault());
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT 06</title>
+    <style>
+        h1{
+            text-align: center;
+            margin-top: 30px;
+        }
+        table{
+            width: 400px;
+          margin: auto;
+            
+        }
+        td{
+            padding-left: 20px;
+        }
+    </style>
+    </head>
+    <body>
+<h1>BẢNG CỬU CHƯƠNG</h1>
+<table border="1">
+<tr>
+    <td id="2"></td>
+    <td id="3"></td>
+    <td id="4"></td>
+    <td id="5"></td>
+</tr>
+<tr>
+    <td id="6"></td>
+    <td id="7"></td>
+    <td id="8"></td>
+    <td id="9"></td>
+</tr>
+</table>
+        <script>
+           function process(so)
+           {
+               var temp=""
+               for(var i = 1;i<10;i++)
+               {
+                   temp+=so+"x"+i+"="+Number(so*i)+"<br>"
+                }
+           return  temp;
+            }
+           document.getElementById("2").innerHTML=process(2)
+           document.getElementById("3").innerHTML=process(3)
+           document.getElementById("4").innerHTML=process(4)
+           document.getElementById("5").innerHTML=process(5)
+           document.getElementById("6").innerHTML=process(6)
+           document.getElementById("7").innerHTML=process(7)
+           document.getElementById("8").innerHTML=process(8)
+           document.getElementById("9").innerHTML=process(9)
+           document.addEventListener('contextmenu', event => event.preventDefault());
+
+        </script>
+    </body>
+</html>

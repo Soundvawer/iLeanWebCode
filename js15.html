@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT 15</title>
+    </head>
+    <body>
+        <h2>Image Resizing</h2>      
+        <hr>
+        <div>
+            Scale:
+            <input type="radio" onclick="muoi()"> 10%
+            <input type="radio" onclick="hailam()"> 25%
+            <input type="radio" onclick="nammuoi()"> 50%
+
+        </div>
+        <div>
+            <img src="../Images/cup noodle.jpg" alt="hinhanh" id="image">
+        </div>
+       <script>
+           function muoi()
+           {
+               document.getElementById("image").style.width = "10%"
+           }
+           function hailam()
+           {
+               document.getElementById("image").style.width = "25%"
+           }
+           function nammuoi()
+           {
+               document.getElementById("image").style.width = "50%"
+           }
+       </script>
+    </body>
+</html>

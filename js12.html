@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT 12</title>
+    </head>
+    <body>
+        <div id ="first"></div>
+        <div >
+            <table>
+                <tr>
+                    <td>Nhập nội dung <td>
+                        <td><input type="text" id="demo"></td>
+                </tr>
+                <tr>
+                    <td>Màu nền : </td>
+                    <td><input type="color" id="color "></td>
+                </tr>
+
+                <tr>
+                    <td>Màu chữ : </td>
+                    <td><input type="color" id="textcolor "></td>
+                </tr>
+                <tr>
+                    <td><button onclick="process()">Thực hiện</button></td>
+                </tr>
+            </table>
+        </div>
+       <script>
+           function process()
+{
+    var chude = document.getElementById("demo").value
+    var maunen = document.getElementById("color").value
+    var mauchu = document.getElementById("textcolor").value
+    document.getElementById("first").innerHTML = chude 
+    document.getElementById("first").style.backgroundColor = maunen 
+    document.getElementById("first").style.color = mauchu 
+}
+       </script>
+    </body>
+</html>

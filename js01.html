@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 01</title>
+</head>
+<body>
+    <h1>CHƯƠNG TRÌNH TÍNH TUỔI</h1>
+    <table border="1">
+        <form >
+            <tr>
+                <td><label for="name">Nhập tên của bạn:</label></td>
+                <td><input type="text" name="txtname" id="name" placeholder="Nhập tên của bạn ở đây"></td>
+            </tr>
+            <tr width="50%">
+                <td><label for="age">Nhập vào năm sinh:</label></td>
+                <td><input type="number" name="txtborn" id="birthyear" placeholder="Nhập ở đây"></td>
+            </tr>
+           
+        </form>
+    </table>
+    <button type="submit" onclick="Tuoi()">Tính tuổi</button>
+    <p id="A"></p>
+    <script>
+        var year = new Date().getFullYear() +1;
+        function Tuoi(){
+        var recentDay = new Date();
+        var recentYear = recentDay.getFullYear();
+        var birthYear = document.getElementById("birthyear").value;
+        var age = recentYear - birthYear;
+        var nameValue = document.getElementById("name").value;
+        document.getElementById("A").innerHTML = "Chào bạn : " + nameValue +"!" + "<br>" + "Tuổi của bạn : " +age;
+        
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+</html>

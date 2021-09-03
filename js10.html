@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 10</title>
+    </head>
+    <body>
+        <h1 align="center" >XỬ LÝ CHUỖI</h1>
+        <label>Chuỗi ban đầu :</label>
+        <input type="text" id="chuoi" >
+        <br>
+        <button  onclick="daochuoi()">Đảo chuỗi</button>
+        <button  onclick="chuanhoachuoi()">Chuẩn hóa chuỗi</button>
+        <br>
+        <script>
+            function  daochuoi()
+            {
+                var chuoibandau = document.getElementById("chuoi").value;
+                var saukhidao = chuoibandau.replace().split(/\s/).reverse().join(" ")
+                document.getElementById("chuoi").value= saukhidao
+            }
+            function  chuanhoachuoi()
+            {
+                var chuoibandau = document.getElementById("chuoi").value;
+                var chuoibandaubandau = chuoibandau.replace(/\s\s+/g," ").split(" ")
+                var count = chuoibandaubandau.length
+                var ketqua = ""
+                for (var index = 0; index < count; index++) {
+                    chuoibandaubandau[index] = chuoibandaubandau[index].charAt(0).toUpperCase() + chuoibandaubandau[index].slice(1).toLowerCase() + " "
+                    ketqua += chuoibandaubandau[index]           
+                }
+                document.getElementById("chuoi").value = ketqua
+            }
+            document.addEventListener('contextmenu',event.preventDefault())
+            </script>
+    </body>
+</html>

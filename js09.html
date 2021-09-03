@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 09</title>
+    </head>
+    <body>
+        <p>THAY THẾ CHUỖI</p>
+        <table>
+            <tr>
+                <td>Chuỗi ban đầu </td>
+                <td><input  type="text" name="chuoi" id ="normal"></td>
+            </tr>
+            <tr>
+                <td>Chuỗi bị thay thế: </td>
+                <td><input type="text" name="chuoibithaythe" id="changed"></td>
+            </tr>
+            <tr>
+                <td>Chuỗi thay thế: </td>
+                <td><input type="text" name="chuoithaythe" id="change"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="thaythe()">Chuỗi thay thế: </button></td>
+            </tr>
+        </table>
+        <script>
+            function thaythe()
+            {
+                var chuoibandau = document.getElementById("normal").value
+                var chuoibi = document.getElementById("changed").value
+                var chuoithay = document.getElementById("change").value
+                var kq = chuoibandau.replace(new RegExp(chuoibi,'i'),chuoithay)
+                document.getElementById("normal").value = kq
+            }
+            </script>
+    </body>
+</html>
