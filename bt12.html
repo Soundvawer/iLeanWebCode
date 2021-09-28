@@ -1,0 +1,84 @@
+<!doctype>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bai tap 12</title>
+        <style>
+            table{
+                background-color: aquamarine;
+                 width: 100%;
+                 border: dimgrey 1px;
+            }
+            textarea{
+                height: 100px;
+                width: 300px;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="onsubmit">
+            <fieldset>
+                <h1><b>THÔNG TIN ĐĂNG KÍ</b></h1>
+            <fieldset>
+                <table>
+                <tbody>
+                    <tr>
+                    <td>Họ tên</td>
+                    <td><input type="text" size="30" placeholder="Nhập họ và tên." required></td>
+                    </tr>
+            <tr>
+            <td>Giới tính</td>
+            <td>
+                <input type="radio" name="radio" id=""> Nam
+                <input type="radio" name="radio" id="" checked> Nữ
+            </td>
+            </tr>
+            <tr>
+            <td>Ngày sinh</td>
+                <td><input type="date" name ="" id=""></td>
+            </tr>
+        <tr>
+            <td>Điều bạn quan tâm nhất </td>
+            <td>
+                <input type="checkbox" checked >Kinh tế
+                <input type="checkbox" checked >Xã hôi
+                <input type="checkbox" >Giải trí
+            </td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td> 
+                <label for="address">
+                <textarea name="address" id="address" cols ="50" rows="10" style="width: 99%;"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Học vấn</td>
+            <td>
+                <select name="van" id="van">
+                    <option value="Đại học" selected >Đại học</option>
+                    <option value="Cao đẳng">Cao đẳng</option>
+                    <option value="Trung cấp">Trung cấp</option>
+                    <option value="THPT">THPT</option>
+                </select>
+            </td>
+        </tr>
+            <tr>
+                <td><button style="text-align: center;">Gửi thông tin</button><button type="reset">Nhập lại</button></td>
+            </tr>
+
+        </tbody>
+            </table>
+            </fieldset>
+            </fieldset>
+        </form>
+    </body>
+            <div style="text-align: center;">
+                <a href="../web.html">Về trang HTML</a><br>
+               <a href="../index.html">Về trang chủ</a>
+            </div>
+</html>
