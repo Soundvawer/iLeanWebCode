@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery 01</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            caption{font-weight: bold;}
+        </style>
+        <script>
+            $().ready(function(){
+                $("#btTotal").click(function(){
+                    var d1= $("#dayFrom").val();
+                    var d2= $("#dayTo").val();
+                    d1= new Date(d1)
+                    d2=  new Date(d2)
+                    var so=(d2.getTime()-d1.getTime())/(3600*24*1000)
+                    $("#result").text("Số ngày là: " + so);
+                })
+            })
+        </script>
+        <body>
+            <table>
+                <caption>Tính số ngày giữa hai thời điểm </caption>
+                <tr>
+                    <td>Từ ngày:</td>
+                    <td><input  type="date" id="dayFrom"></td>
+                </tr>
+                <tr>
+                    <td>Đến ngày:</td>
+                    <td><input  type="date" id="dayTo"></td>
+                </tr>
+                <tr>
+                    <td><button  id="btTotal">Tính số ngày</button></td>
+                    <td><span id="result"></span></td>
+                </tr>
+            </table>
+        </body>
+    </head>
+</html>
